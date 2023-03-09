@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-    <title>Countries</title>
+    <title>Countres</title>
     <style>
         body{
             background-color:brown;
@@ -37,8 +37,7 @@
         "Azerbaijan", "Bahrain", "Cyprus", "Georgia", "Iraq", "Israel", "Jordan", "Kuwait", "Lebanon", "Oman", "Qatar", "Saudi Arabia",
         "State of Palestine", "Syrian Arab Republic", "Turkey", "United Arab Emirates", "Yemen"
     );
-
-    // เรียงลำดับตัวอักษร
+  
     $filename = array("hw-doc01.txt", "hw-doc02.txt", "hw-doc03.txt");
 
     for ($x = 0; $x <= 2; $x++) {
@@ -47,7 +46,7 @@
         if (file_exists($file)) {  //ถ้ามีไฟล์อยู่แล้ว ให้ค่ามาใช้
             $word = file_get_contents($file);
         } else {
-            $word = 'no word';  //ไม่มีข้อมูลใน file  
+            echo "no file data";  //ไม่มีข้อมูลใน file  
         }
 
         $text = [];    //อาร์เรย์ว่างสำหรับเก็บชื่อประเทศที่พบ
