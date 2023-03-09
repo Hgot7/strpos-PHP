@@ -59,18 +59,16 @@
         sort($text);            // เรียงลำดับตัวอักษร
         $Countries = implode('<br>', $text);   // ใช้แบ่งข้อความ
         echo '<div class="card text-center">
-    <div class="card-header text-bg-danger">
-    <h5 class="card-title">Asia Countries</h5> 
-    </div>
-    <div class="card-body">
-      <h5 class="card-title">filename : ' . $filename[$x] . '</h5>
-      <p class="card-text">' . $Countries . '</p>
-    </div>
-</div> ';
-    }
-
-
-    ?>
+                  <div class="card-header text-bg-danger">
+                  <h5 class="card-title">Asia Countries</h5> 
+                  </div>
+               <div class="card-body">
+                     <h5 class="card-title">filename : ' . $filename[$x] . '</h5>
+              <p class="card-text">' . $Countries . '</p>
+             </div>
+            </div> ';
+            } 
+            ?>
 </body>
 
 </html>
