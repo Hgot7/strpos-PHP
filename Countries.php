@@ -47,7 +47,7 @@
         if (file_exists($file)) {  //ถ้ามีไฟล์อยู่แล้ว ให้ค่ามาใช้
             $word = file_get_contents($file);
         } else {
-            $word = 'no word';  //กำหนดค่าเริ่มต้นที่ต้องการ 
+            $word = 'no word';  //ไม่มีข้อมูลใน file  
         }
 
         $text = [];    //อาร์เรย์ว่างสำหรับเก็บคำหยาบที่พบ
