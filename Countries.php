@@ -50,24 +50,22 @@
             $word = 'no word';  //ไม่มีข้อมูลใน file  
         }
 
-        $text = [];    //อาร์เรย์ว่างสำหรับเก็บคำหยาบที่พบ
+        $text = [];    //อาร์เรย์ว่างสำหรับเก็บชื่อประเทศที่พบ
         foreach ($Asia as $check) {
             if (stripos($word, $check) != null) {     //ถ้ามีคำในสตริง
                 $text[] = $check;                                //ถ้าพบ ให้เก็บไว้ในอาร์เรย์
             }
         }
-
-        sort($Asia);
-        array_unique($text);
-        sort($text);
-        $str = implode('<br>', $text);
+        array_unique($text);     // check ตัวซ้ำ
+        sort($text);            // เรียงลำดับตัวอักษร
+        $Countries = implode('<br>', $text);   // ใช้แบ่งข้อความ
         echo '<div class="card text-center">
     <div class="card-header text-bg-danger">
     <h5 class="card-title">Asia Countries</h5> 
     </div>
     <div class="card-body">
       <h5 class="card-title">filename : ' . $filename[$x] . '</h5>
-      <p class="card-text">' . $str . '</p>
+      <p class="card-text">' . $Countries . '</p>
     </div>
 </div> ';
     }
